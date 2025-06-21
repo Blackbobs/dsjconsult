@@ -82,7 +82,7 @@ export function Navigation() {
                   {item}
                 </Link>
               ))}
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white mt-4">Get Started</Button>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white mt-4">Schedule a Call</Button>
             </div>
           </motion.div>
         )}
