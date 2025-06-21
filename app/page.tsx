@@ -1,6 +1,6 @@
 import { AboutSection } from "@/components/about-section";
 import { BioSection } from "@/components/bio-section";
-import { ContactSection } from "@/components/contact-section";
+// import { ContactSection } from "@/components/contact-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/hero-section";

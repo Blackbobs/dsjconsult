@@ -76,7 +76,7 @@ export function BioSection() {
                 viewport={{ once: true }}
               >
                 I&apos;ve helped clients reduce administrative workload by up to 35% through automation, clear processes, and
-                proactive support. Known for working independently while staying seamlessly aligned with your team's
+                proactive support. Known for working independently while staying seamlessly aligned with your team&apos;s
                 goals and communication flow.
               </motion.p>
               <motion.div

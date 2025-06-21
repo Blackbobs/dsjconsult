@@ -29,7 +29,7 @@ export function AboutSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            We are a versatile service agency committed to helping individuals and businesses thrive. Whether it's
+            We are a versatile service agency committed to helping individuals and businesses thrive. Whether it&apos;s
             maintaining a pristine work environment, managing day-to-day admin tasks, or leading complex projects, our
             team delivers with excellence, professionalism, and a personal touch.
           </motion.p>
