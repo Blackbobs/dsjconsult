@@ -18,10 +18,10 @@ const staggerContainer = {
   },
 }
 
-const scaleOnHover = {
-  whileHover: { scale: 1.08, y: -10 },
-  transition: { type: "spring", stiffness: 300, damping: 20 },
-}
+// const scaleOnHover = {
+//   whileHover: { scale: 1.08, y: -10 },
+//   transition: { type: "spring", stiffness: 300, damping: 20 },
+// }
 
 const bounceAnimation = {
   initial: { scale: 0, rotate: -180 },

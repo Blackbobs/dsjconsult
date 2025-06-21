@@ -83,7 +83,7 @@ export function TestimonialsSection() {
                     <Quote className="w-8 h-8 text-blue-600 mb-4" />
                   </motion.div>
                   <p className="text-gray-600 mb-6 italic text-base md:text-lg leading-relaxed">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
