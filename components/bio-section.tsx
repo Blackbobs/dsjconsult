@@ -15,7 +15,7 @@ export function BioSection() {
           viewport={{ once: true }}
         >
           <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
-            <motion.div
+            {/* <motion.div
               className="md:col-span-1 text-center"
               initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -29,7 +29,7 @@ export function BioSection() {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
-            </motion.div>
+            </motion.div> */}
             <motion.div
               className="md:col-span-2 space-y-6 text-center md:text-left"
               initial={{ opacity: 0, x: 100 }}

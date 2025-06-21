@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-import { CheckCircle } from "lucide-react"
+import { Award, Shield, BarChart3, Zap, CheckCircle } from "lucide-react"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 80 },
@@ -17,15 +17,15 @@ const staggerContainer = {
   },
 }
 
-export function WhyWorkSection() {
-  const reasons = [
-    "Experienced, Multi-Talented Team",
-    "Custom Packages to Suit Your Needs",
-    "Transparent Pricing",
-    "Reliable Communication",
-    "High Standards, Every Time",
-  ]
+const whyChooseUs = [
+  { icon: Award, text: "Experienced, Multi-Talented Team" },
+  { icon: Shield, text: "Custom Packages to Suit Your Needs" },
+  { icon: BarChart3, text: "Transparent Pricing" },
+  { icon: Zap, text: "Reliable Communication" },
+  { icon: CheckCircle, text: "High Standards, Every Time" },
+]
 
+export function WhyWorkSection() {
   return (
     <section className="py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -54,7 +54,7 @@ export function WhyWorkSection() {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          {reasons.map((item, index) => (
+          {whyChooseUs.map(({ icon: Icon, text }, index) => (
             <motion.div
               key={index}
               variants={fadeInUp}
@@ -69,9 +69,9 @@ export function WhyWorkSection() {
                 transition={{ delay: index * 0.1, type: "spring", stiffness: 260, damping: 20 }}
                 viewport={{ once: true }}
               >
-                <CheckCircle className="w-8 h-8 text-blue-600" />
+                <Icon className="w-8 h-8 text-blue-600" />
               </motion.div>
-              <p className="font-semibold text-gray-900 text-sm md:text-base leading-tight">{item}</p>
+              <p className="font-semibold text-gray-900 text-sm md:text-base leading-tight">{text}</p>
             </motion.div>
           ))}
         </motion.div>

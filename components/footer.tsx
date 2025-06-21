@@ -1,5 +1,4 @@
 "use client"
-
 import { motion } from "motion/react"
 import { Mail, Phone, MapPin } from "lucide-react"
 import Link from "next/link"
