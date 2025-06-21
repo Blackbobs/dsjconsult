@@ -34,7 +34,7 @@ export function ContactSection() {
               transition={{ delay: 0.4, duration: 0.8 }}
               viewport={{ once: true }}
             >
-              Ready to transform your business? Let's talk.
+              Ready to transform your business? Let&apos;s talk.
             </motion.p>
           </div>
 

@@ -30,7 +30,7 @@ export function CTASection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Book a free consultation today — let's build a solution that fits your goals.
+            Book a free consultation today — let&apos;s build a solution that fits your goals.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"

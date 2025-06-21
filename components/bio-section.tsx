@@ -75,7 +75,7 @@ export function BioSection() {
                 transition={{ delay: 1.2, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                I've helped clients reduce administrative workload by up to 35% through automation, clear processes, and
+                I&apos;ve helped clients reduce administrative workload by up to 35% through automation, clear processes, and
                 proactive support. Known for working independently while staying seamlessly aligned with your team's
                 goals and communication flow.
               </motion.p>
