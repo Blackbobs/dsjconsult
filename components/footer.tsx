@@ -52,7 +52,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 hover:text-white transition-colors">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>hello@dsjconsult.com</span>
+                <span>ty@dsjconsult.com</span>
               </div>
               {/* <div className="flex items-center gap-3 hover:text-white transition-colors">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
