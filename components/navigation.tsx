@@ -5,9 +5,14 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 export function Navigation() {
+  const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  // Updated nav links
+  const navItems = ["About Us", "Services", "Contact"]
 
   return (
     <motion.nav
@@ -19,16 +24,17 @@ export function Navigation() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <motion.div
-            className="text-2xl font-bold text-gray-900"
+            className="text-2xl font-bold text-gray-900 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
+            onClick={() => router.push('/')}
           >
             DSJ Consult
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {["Services", "About", "Testimonials", "Contact"].map((item, index) => (
+            {navItems.map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, y: -20 }}
@@ -36,7 +42,7 @@ export function Navigation() {
                 transition={{ delay: index * 0.1 + 0.5 }}
               >
                 <Link
-                  href={`#${item.toLowerCase()}`}
+                  href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
                 >
                   {item}
@@ -44,18 +50,6 @@ export function Navigation() {
               </motion.div>
             ))}
           </div>
-
-          {/* Desktop CTA */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8 }}
-            className="hidden md:block"
-          >
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
-              Schedule a Call
-            </Button>
-          </motion.div>
 
           {/* Mobile Menu Button */}
           <button className="md:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -72,17 +66,16 @@ export function Navigation() {
             className="md:hidden mt-4 pb-4 border-t"
           >
             <div className="flex flex-col space-y-4 pt-4">
-              {["Services", "About", "Testimonials", "Contact"].map((item) => (
+              {navItems.map((item) => (
                 <Link
                   key={item}
-                  href={`#${item.toLowerCase()}`}
+                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-gray-600 hover:text-blue-600 transition-colors py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item}
                 </Link>
               ))}
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white mt-4">Schedule a Call</Button>
             </div>
           </motion.div>
         )}
