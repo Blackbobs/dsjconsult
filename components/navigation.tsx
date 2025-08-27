@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "motion/react"
-import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -69,7 +68,7 @@ export function Navigation() {
               {navItems.map((item) => (
                 <Link
                   key={item}
-                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`${item.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-gray-600 hover:text-blue-600 transition-colors py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >

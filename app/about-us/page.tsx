@@ -18,14 +18,14 @@ export default function Page() {
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         <motion.h1
           className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
           initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }} 
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
         >
@@ -34,7 +34,7 @@ export default function Page() {
         <motion.div
           className="h-1 w-20 bg-blue-600 mx-auto"
           initial={{ width: 0 }}
-          whileInView={{ width: 80 }}
+          animate={{ width: 80 }}
           transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
         ></motion.div>
@@ -55,7 +55,7 @@ export default function Page() {
             to our valued clients across all industries.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            We leverage our expertise to provide best-in-class solution to meet our client's needs 
+            We leverage our expertise to provide best-in-class solution to meet our client&apos;s needs 
             and sustain their bottom line.
           </p>
         </motion.div>
@@ -109,7 +109,7 @@ export default function Page() {
               used to address complex problems.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              We are committed to providing top notch services that guaranteed client's satisfaction.
+              We are committed to providing top notch services that guaranteed client&apos;s satisfaction.
             </p>
             <div className="mt-6 w-full h-64 bg-gray-200 rounded-lg overflow-hidden">
               <img 

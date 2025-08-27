@@ -1,13 +1,11 @@
 "use client"
 
 import { motion } from "motion/react"
-import { ChevronRight } from "lucide-react"
 
 type Service = {
   title: string
   description: string
   icon: string
-  readMore: boolean
 }
 
 type ServicesSectionProps = {
@@ -21,40 +19,35 @@ export function ServicesSection({ limit }: ServicesSectionProps) {
       description:
         "DSJ offers wide range of consulting solutions and ideas to our clients. Our Consulting solutions cover the following field: Oil & Gas, Healthcare, IT solutions, Governance, Strategic & Crisis",
       icon: "📊",
-      readMore: true,
+
     },
     {
       title: "OFFSHORE FACILITIES MANAGEMENT",
-      description: "Details coming soon..",
+      description: "DSJ provides end-to-end offshore facilities management solutions that ensure safety, efficiency, and compliance. From maintenance and logistics support to health and safety oversight, we help clients optimize offshore operations while minimizing risks.",
       icon: "🏗️",
-      readMore: true,
     },
     {
       title: "NDT INSPECTION",
-      description: "Details coming soon...",
+      description: "Our Non-Destructive Testing (NDT) inspection services deliver precise evaluations of materials and structures without causing damage. We apply industry-leading techniques to ensure asset reliability, safety, and compliance with international standards.",
       icon: "🔍",
-      readMore: true,
     },
     {
       title: "PROJECT MANAGEMENT",
       description:
         "DSJ Project Management Framework (PMF) delivers proven results through current industry-leading practices focusing on optimizing our clients’ program/project results and return on investment.",
       icon: "📂",
-      readMore: true,
     },
     {
       title: "SUPPLY CHAIN MANAGEMENT",
       description:
         "Emerging and maturing markets, new technologies, regulatory requirements and changing weather, all affect supply chain. Our solutions help SCM leaders minimize costs and improve resilience.",
       icon: "🔗",
-      readMore: true,
     },
     {
       title: "ENGINEERING",
       description:
         "DSJ is positioned to provide engineering services such as Subsurface evaluations. We are a resourceful group of dedicated specialists delivering exceptional engineering solutions.",
       icon: "⚙️",
-      readMore: true,
     },
   ]
 
@@ -103,11 +96,6 @@ export function ServicesSection({ limit }: ServicesSectionProps) {
               <div className="text-5xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              {service.readMore && (
-                <a href="#" className="text-blue-600 font-medium mt-auto flex items-center">
-                  Read more <ChevronRight size={16} className="ml-1" />
-                </a>
-              )}
             </motion.div>
           ))}
         </div>

@@ -1,14 +1,14 @@
-"use client"
-import { motion } from "motion/react"
-import { Mail, Phone, MapPin } from "lucide-react"
-import Link from "next/link"
+"use client";
+import { motion } from "motion/react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12 md:py-16">
       <div className="container mx-auto px-4">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-between gap-8"
+          className="flex items-center justify-between gap-20"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -28,35 +28,51 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(892)-292-4285</span>
+                <Link href={"tel:8922924285"}>(892)-292-4285</Link>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>info@dsjprojectconsulting</span>
+                <Link target="_blank" href={"mailto:ty@dsjconsult.com"}>
+                  ty@dsjconsult.com
+                </Link>
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
+            className="flex-1"
           >
             <h4 className="font-semibold mb-4 text-lg">MENU LIST</h4>
-            <div className="grid grid-cols-2 gap-2 text-gray-400">
-              <Link href="#" className="hover:text-white transition-colors">Home</Link>
-              <Link href="#" className="hover:text-white transition-colors">About us</Link>
-              <Link href="#" className="hover:text-white transition-colors">Services</Link>
-              <Link href="#" className="hover:text-white transition-colors">Sector</Link>
-              <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="#" className="hover:text-white transition-colors">Contact</Link>
+            <div className="flex flex-col  gap-2 text-gray-400">
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <Link
+                href="/about-us"
+                className="hover:text-white transition-colors"
+              >
+                About us
+              </Link>
+              <Link
+                href="/services"
+                className="hover:text-white transition-colors"
+              >
+                Services
+              </Link>
+              <Link
+                href="/contact"
+                className="hover:text-white transition-colors"
+              >
+                Contact
+              </Link>
             </div>
           </motion.div>
-          
-       
         </motion.div>
-        
+
         <motion.div
           className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
           initial={{ opacity: 0 }}
@@ -68,5 +84,5 @@ export function Footer() {
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }
