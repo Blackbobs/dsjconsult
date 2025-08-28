@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
@@ -20,19 +20,21 @@ export function Footer() {
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-bold mb-4">ADDRESS</h3>
+            <h3 className="text-lg font-bold mb-4">DSJ Consult</h3>
             <div className="space-y-3 text-gray-400">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
-                <span>25127 Summer Walk Lane, Katy Texas 77494</span>
-              </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <Link href={"tel:8922924285"}>(892)-292-4285</Link>
+                <Link
+                  href="https://wa.me/17047758225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +1 (704) 775-8225
+                </Link>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <Link target="_blank" href={"mailto:ty@dsjconsult.com"}>
+                <Link target="_blank" href={"mailto:ty@dsjconsult.com"} rel="noopener noreferrer">
                   ty@dsjconsult.com
                 </Link>
               </div>

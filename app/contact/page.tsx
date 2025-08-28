@@ -1,6 +1,7 @@
 "use client";
 
-import { Mail, MapPin, Phone, User } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -64,19 +65,16 @@ export default function ContactForm() {
               </div>
               <div>
                 <h3 className="text-gray-700 font-medium">Office Phone</h3>
-                <p className="text-gray-600">832.292.4285</p>
+                <Link
+                  href="https://wa.me/17047758225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +1 (704) 775-8225
+                </Link>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="p-3 rounded-full bg-yellow-100">
-                <User className="text-yellow-500 w-4 h-4" />
-              </div>
-              <div>
-                <h3 className="text-gray-700 font-medium">Manager</h3>
-                <p className="text-gray-600">832.292.4285</p>
-              </div>
-            </div>
 
             <div className="flex items-center gap-4">
               <div className="p-3 rounded-full bg-blue-100">
@@ -84,19 +82,13 @@ export default function ContactForm() {
               </div>
               <div>
                 <h3 className="text-gray-700 font-medium">Email</h3>
-                <p className="text-gray-600">ty@dsjconsult.com</p>
+                <Link target="_blank" href={"mailto:ty@dsjconsult.com"} rel="noopener noreferrer">
+                  ty@dsjconsult.com
+                </Link>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="p-3 rounded-full bg-gray-100">
-                <MapPin className="text-gray-500 w-4 h-4" />
-              </div>
-              <div>
-                <h3 className="text-gray-700 font-medium">Address</h3>
-                <p className="text-gray-600">25127 Summer Walk Lane</p>
-              </div>
-            </div>
+            
           </div>
         </div>
 
